@@ -35,17 +35,17 @@ print(paises_mayor_co2["country"].unique().tolist())
 
 #4
 #Primero un promedio mundial para realizar una estimacion
-promedio_mundial = df_nations['school'].mean()
+promedio_mundial = df_nations['literacy'].mean()
 #Aqui se filtran en dos datasets distintos, uno para africa y otro para europa
 df_africa = df_nations[df_nations['region'] == 'Africa']
 df_europe = df_nations[df_nations['region'] == 'Europe']
 #Calculamos el promedio de educacion en ambos continentes
-promedio_africa = df_africa['school'].mean()
-promedio_europe = df_europe['school'].mean()
+promedio_africa = df_africa['literacy'].mean()
+promedio_europe = df_europe['literacy'].mean()
 
 #imprimimos los promedios para calcular
 print("Promedio de escolaridad mundial:", promedio_mundial)
 print("Promedio de escolaridad en África:", promedio_africa)
 print("Promedio de escolaridad en Europa:", promedio_europe)
 
-#Por ultimo se puede ver que el promedio de africa esta tres puntos por debajo de la media y el de europa 3 puntos por arriba de la media, esto solo como un analisis muy simple, existen muchos factores mas a tomar en cuenta para un mejor analisis.
+#Por ultimo se puede ver que el promedio de africa esta por debajo de la media y el de europa por arriba de la media, esto solo como un analisis muy simple, existen muchos factores mas a tomar en cuenta para un mejor analisis.
